@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+    	<button class="btn primary" id="button">Enviar notificación</button>
+    	<div class="notification" id="notification" data-count></div>
+    </header>
+	<div class="container">
+		<div class="content">
+			Animations!!!
+		</div>
+
+			<div class="waves">
+				        <div class="ship"></div>
+						<div class="wave a"></div>
+						<div class="wave b"></div>
+						<div class="wave c"></div>
+					</div>
+	</div>
+
+	<div class="ani">
+		<div class="logoplatzi">
+			<p>Platzi</p>
+				<div class="platzi">
+				  <div class="platzi-left"></div>
+				  <div class="platzi-right"></div>
+			   </div>
+				   <div class="likes">
+			 	     <div class="tweet-box">
+		              <div class="like" id="like"></div>
+		          </div>
+	          </div>
+		</div>
+           
+          	<div class="logoplatzi">
+	          		<div class="cie">
+	 	    	        <div class="cielo"></div>
+	 	    	        <div class="sol"></div>
+	 	    	        <div class="luna"></div>
+	 	    	        <div class="flor"></div>
+	 	    	     </div>
+		 	    	     <div class="likes">
+				 	          <div class="tweet-box">
+			                   <div class="like" id="like2"></div>
+			              </div>
+		              </div>
+          	</div>
+
+          	<div class="logoplatzi">
+          		<div class="pacman"></div>
+          			<div class="likes">
+          					<div class="tweet-box">
+			                   <div class="like" id="like3"></div>
+			              </div>
+          			</div>
+          	</div>
+
+          	<div class="logoplatzi">
+          		<div class="satelite"></div>
+          			<div class="likes">
+          					<div class="tweet-box">
+			                   <div class="like" id="like3"></div>
+			              </div>
+          			</div>
+          	</div>
+	</div>
+
+     
+    	
+	       
+	      
+         
+               
+
+ 	             
+	 	      
+
+
+
+	<script>
+		const $button = document.getElementById('button');
+		const $bell = document.getElementById('notification');
+		
+		
+		$button.addEventListener('click', ()=>{
+	    const count=Number($bell.getAttribute('data-count'))|| 0;
+		$bell.setAttribute('data-count',count+1);
+
+			$bell.classList.add('show-count');
+			 $bell.classList.add('notify');
+		});
+		$bell.addEventListener('animationend',()=>{$bell.classList.remove('notify')});
+
+		const $like=document.getElementById('like');
+	$like.addEventListener('click', (event)=>{
+		// like.classList.add('is-liked');
+		like.classList.toggle('is-liked');
+	});
+
+	const $like2=document.getElementById('like2');
+	$like2.addEventListener('click', (event)=>{
+		// like.classList.add('is-liked');
+		like2.classList.toggle('is-liked');
+	});
+
+	
+	</script>
+
+</body>
+</html>

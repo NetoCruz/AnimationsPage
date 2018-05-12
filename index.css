@@ -1,0 +1,481 @@
+body{
+		margin: 0;
+	}
+
+	.header{
+		background: #1d3644;
+		display: flex;
+		height: 52px;
+		justify-content: flex-end;
+		padding-right: 100px;
+	}
+		.notification{
+			color: white;
+			width: 50px;
+			height: inherit;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+  
+ }
+
+ .ani{
+ 	height: 400px;
+ 	display: inline-flex;
+ }
+
+
+    
+		
+		.flower{
+			display: inline-flex;
+			text-align: center;
+			font-size: 2em;
+			font-family: 'Roboto', sans-serif;
+			color:white;
+			margin:20px;
+			border-radius: 10px;
+			width: 300px;
+			height:300px;
+			background: #234050;
+		}
+		.cie{
+			align-items: center;
+			margin-left: 50px;
+			display: flex;
+			margin-top: 30px;
+    margin-bottom: 58px;
+		}
+		.cielo{
+			height: 192px;
+			width: 200px;
+			background: #4BB3FD;
+			animation-duration:4s; 
+			animation-name:day;
+			animation-iteration-count:infinite;
+     	    animation-direction: alternate;
+     	    border-radius: 10px;
+		}
+		.sol{
+			width: 25px;
+			height: 25px;
+			border-radius: 50px;
+			background: white;
+			margin-left: -180px;
+    margin-top: -100px;
+		}
+		.luna{
+			margin-left: -25px;
+    margin-top: -100px;
+			
+         width: 25px;
+			height: 25px;
+			border-radius: 50px;
+			background: #FFDE17;
+			animation-duration:4s; 
+			animation-name:day;
+			animation-iteration-count:infinite;
+     	    animation-direction: alternate;
+		}
+		@keyframes day{
+			0%{opacity: 1;}
+			100%{opacity: 0;}
+		}
+
+     .flor{
+     	margin-left: 25px;
+     	z-index: 1;
+     	width: 95px;
+			height:192px;
+     	background: url('flor3.png');
+     	animation-name: flor;
+     	animation-duration: 4s;
+     	animation-iteration-count:infinite;
+     	animation-direction: alternate;
+     	animation-timing-function: steps(19);
+     	background-position:right;
+
+     }
+     @keyframes flor{
+     	0%{
+            background-position: 0 0;
+			}
+			100%{
+            background-position:right;
+			}
+     }
+
+     .pacman{
+     	margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+     	width: 200px;
+     	height: 200px;
+     	background: url('pacman.png');
+     	animation-name: pacman;
+     	animation-duration: 1s;
+     	animation-iteration-count:infinite;
+     	/*animation-direction: alternate;*/
+     	animation-timing-function: steps(2);
+     	background-position:right;
+     }
+
+     @keyframes pacman{
+     	0%{
+            background-position: 0 0;
+			}
+			100%{
+            background-position:right;
+			}
+
+     }
+     .satelite{
+     	margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+     	background: url('satelite.png');
+     	width: 200px;
+     	height: 200px;
+     	animation-name: satelite;
+     	animation-duration: 1s;
+     	animation-iteration-count:infinite;
+     	/*animation-direction: alternate;*/
+     	animation-timing-function: steps(3);
+     	background-position:right;
+     }
+
+     @keyframes satelite{
+     	0%{
+            background-position: 0 0;
+			}
+			100%{
+            background-position:right;
+			}
+
+     }
+
+		.logoplatzi{
+			text-align: center;
+			font-size: 2em;
+			font-family: 'Roboto', sans-serif;
+			color:white;
+			margin:20px;
+			border-radius: 10px;
+			width: 300px;
+			height: 300px;
+			background: #234050;
+			position: relative;
+		}
+		.tweet-box{
+			    display: inline-flex;
+    margin-top: -10px;
+		}
+
+		.likes{
+			
+            position: relative;
+			bottom: 50px;
+			border-radius: 0 0 10px 10px;
+			/*margin-top: 92px;*/
+			height: 70px;
+			background: #14232C;
+		}
+
+		.like{
+			cursor: pointer;
+			width: 100px;
+			height: 100px;
+			background-image: url('corazon.png');
+			
+
+		}
+
+		.like2{
+			cursor: pointer;
+			width: 100px;
+			height: 100px;
+			background-image: url('corazon.png');
+			
+
+		}
+
+		.like.is-liked{
+			animation-name: like;
+			animation-duration: 1s;
+			
+			/*2900px/29=100px*/
+			animation-timing-function: steps(28);
+            /*background-position: -2800px 0;*/
+            background-position:right;
+		}
+		@keyframes like {
+			0%{
+            background-position: 0 0;
+			}
+			100%{
+            background-position:right;
+			}
+		}
+
+		@keyframes bell {
+			0%{
+              transform: rotate(35deg);
+			}
+			12.5%{
+               transform: rotate(-30deg);
+			} 
+			25%{
+				transform: rotate(25deg);
+			}
+			37.5%{
+				transform: rotate(-20deg);
+			}
+
+			50%{
+				transform: rotate(15deg);
+			}
+			62.5%{
+              transform: rotate(-10deg);
+			}
+			75%{
+              transform: rotate(5deg);
+			}
+			100%{
+             transform: rotate(0deg);
+			}
+		}
+
+		.notification:before{
+			content: "\f0f3";
+			font-family: "FontAwesome";
+			display: block;
+			transform-origin: center top;
+		}
+		.notification.notify:before{
+			animation-name: bell;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+
+			
+		}
+		.notification:after{
+			content: attr(data-count);
+
+			font-size: 11px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			min-width: 14px;
+			height: 14px;
+
+			background: #ff4600;
+			border-radius: 50%;
+			font-family: arial;
+			position: absolute;
+
+			top: 5px;
+			right: 5px;
+
+			opacity: 0;
+			transition: .3s;
+			transform: scale(.5);
+			will-change:opacity, transform;
+		}
+          .notification.show-count:after{
+          	opacity: 1;
+          	transform: scale(1);
+          }
+
+		.btn {
+      text-align: center;
+      padding: .6em .8em .8em;
+      border: none;
+      color: white;
+      background: lightgray;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: inset 0 -.2em rgba(0,0,0, .2);
+      outline: 0;
+      transition: .2s;
+      will-change: transform;
+    }
+    .btn.primary {
+      background: #247BA0;
+    }
+    .btn.warning {
+      background: #ff463b;
+    }
+    .btn:active {
+      transform: scale(.9);
+    }
+
+
+    .platzi{
+    	margin-bottom: 53px;
+        margin-top: -35px;
+        margin-left: 77px;
+    	padding: 30px;
+		width: 100px;
+		height: 100px;
+		position: relative;
+		
+		transform: rotate(45deg);
+		animation-name: platzi-base;
+		animation-duration: 3.5s;
+		animation-iteration-count: infinite;
+	}
+	.platzi-left{
+		width: 100%;
+		height: 65%;
+		border: 20px solid #97c93e;
+		border-radius: 20px 20px 0 0;
+		box-sizing: border-box;
+		border-bottom: none;
+		position: relative;
+		top: 1px;
+		animation-name: platzi-left;
+		animation-duration: 3.5s;
+		animation-delay: 1s;
+		animation-iteration-count: infinite;
+	}
+	.platzi-right{
+		width: 100%;
+		height: 35%;
+		border: 20px solid #97c93e;
+		border-top: none;
+		box-sizing: border-box;
+		border-radius: 0 0 20px 20px;
+	}
+
+	@keyframes platzi-base{
+		0%{
+			opacity: 0;
+			transform: scale(.3) rotate(0deg);
+		}
+        30%{
+        	opacity: 1;
+        	transform: scale(.8) rotate(405deg);
+        }
+
+        80%{
+        	opacity: 1;
+        	transform: scale(.8) rotate(405deg);
+        }
+
+		100%{
+			opacity: 0;
+			transform: scale(.3) rotate(0deg);
+		}
+
+	}
+	@keyframes platzi-left{
+     0%{
+     	width: 100%;
+     }
+     20%{
+     	width: 80%;
+     }
+     50%{
+     	width: 80%;
+     }
+     70%{
+     	width: 100%;
+     }
+     100%{
+     	width: 100%;
+     }
+	}
+
+
+.container{
+	height: 500px;
+	background: #D81E5B;
+	display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		position: relative;
+}
+
+.content{
+		font-family: arial;
+		text-align: center;
+		font-size: 4em;
+		color:rgba(255,255,255, .8);
+	}
+
+	.waves{
+		position: absolute;
+		bottom: -135px;
+		height: 527px;
+		width: 100%;
+		overflow: hidden;
+		
+	}
+
+	.ship{
+		background: url('ship.png') center bottom;
+		margin-left: 200px;
+		margin-top: 60px;
+		height: 200px;
+			width: 200px;
+			opacity: .5;
+			/*animation-name: ship;
+			animation-duration: 5s;*/
+	        animation-iteration-count: infinite;
+			animation:6s ship ease-in-out infinite alternate;
+			animation-delay: .6s;
+			
+	}
+
+	.wave{
+			
+			height: 427px;
+			width: 2402px;
+			background: url(waves.png) center bottom no-repeat ;
+			position: absolute;
+			animation:5s wave ease-in-out infinite alternate;
+			left: -180px;
+			bottom: 0;
+			
+		}
+		.wave.a{
+			background-position: 0 -854px;
+		}
+		.wave.b{
+			background-position: 0 -427px;
+        animation-delay: .6s;
+		}
+		.wave.c{
+			background-position: 0 -854px;
+         animation-delay: 1.2s;
+		}
+
+		@keyframes wave{
+			0%{
+             transform: translateX(0px) translateY(0px);
+			}
+			50%{
+				transform: translateX(-80px) translateY(30px);
+			}
+			100%{
+             transform: translateX(160px) translateY(-60px);
+			}
+		}
+
+		@keyframes ship{
+			0%{
+             transform: translateX(0px) translateY(0px);
+			}
+			50%{
+				transform: translateX(-80px) translateY(20px);
+			}
+			100%{
+             transform: translateX(160px) translateY(-50px);
+			}
+			
+		}
+
+		
